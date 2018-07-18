@@ -1,19 +1,30 @@
 var webpack=require("webpack");
+var uglifyjsWebpackPlugins=require("uglifyjs-webpack-plugin");//压缩js的插件
 module.exports={
-    entry:'./src/index.js',
+    entry:{
+        index:'./src/index.js',
+    },
     output:{
-        filename:'[name].js',
-        path:__dirname+'dist',
-        publicPath:'http://localhost:8080/out'
+        filename:'[name].bundle.js',
+        path:__dirname + '/out',
+        publicPath:''
     },
     module:{
         rules:[
             {
-                test:/\.js$/,
-                use:["babel-loader"]
+                test:/.css$/,
+                use:["style-loader","css-loader"]
             },
-        ]
-        
-    }
+            {
+                test:/.less$/,
+                use:["style-loader","css-loader","less-loader"]
+            }
 
+
+        ]
+    },
+    plugins:[
+        new uglifyjsWebpackPlugins(),
+    ],
+    mode:'development'
 }

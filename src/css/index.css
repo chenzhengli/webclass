@@ -1,5 +1,27 @@
-.wrapper{
-    width:100px;
-    height:100px;
-    background-color: #f40;
-}
+
+ .logo {
+    height: 32px;
+    background: rgba(255,255,255,.2);
+    margin: 16px;
+    color:#fff;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+  }
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+  }
+  .trigger:hover {
+    color: #1890ff;
+  }
+  .ant-btn-group{
+    float:right;
+    padding: 0 10px;
+  }
+  .ant-btn-group > .ant-btn{
+      border:none;
+  }

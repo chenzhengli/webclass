@@ -1,4 +1,6 @@
 const routerurl={
     index:"/",
+    home:'/Home',
+    demo:'/Demo'
 }
-export default routerulr;
+export default routerurl;
